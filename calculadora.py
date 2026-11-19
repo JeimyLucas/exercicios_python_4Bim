@@ -74,53 +74,50 @@ def decimal():
 # Criando a janela
 janela = tk.Tk()
 janela.title("Calculadora")
-janela.geometry("300x350")
+janela.geometry("310x250")
 janela.resizable(False, False)
 
-# Criando o visor
+# visor
 visor = tk.Entry(janela, font=("Arial", 20), justify="right")
 visor.grid(row=0, column=0, columnspan=4, padx=5, pady=10)
 
-# Botões da primeira linha
+# Botões
+#linha 1
 tk.Button(janela, text="C", width=6, command=limpar).grid(row=1, column=0, padx=2, pady=2)
-
+#linha 2
 tk.Button(janela, text="⌫", width=6, command=apagar).grid(row=1, column=1, padx=2, pady=2)
-
+#linha 3
 tk.Button(janela, text="/", width=6, command=lambda: escolher_operacao("/")).grid(row=1, column=2, padx=2, pady=2)
-
+#linha 4
 tk.Button(janela, text="x", width=6, command=lambda: escolher_operacao("x")).grid(row=1, column=3, padx=2, pady=2)
-
-# Segunda linha
+#linha 5
 tk.Button(janela, text="7", width=6, command=lambda: digitar("7")).grid(row=2, column=0, padx=2, pady=2)
-
+#linha 6
 tk.Button(janela, text="8", width=6, command=lambda: digitar("8")).grid(row=2, column=1, padx=2, pady=2)
-
+#linha 7
 tk.Button(janela, text="9", width=6, command=lambda: digitar("9")).grid(row=2, column=2, padx=2, pady=2)
-
+#linha 8
 tk.Button(janela, text="-", width=6, command=lambda: escolher_operacao("-")).grid(row=2, column=3, padx=2, pady=2)
-
-# Terceira linha
+#linha 9
 tk.Button(janela, text="4", width=6, command=lambda: digitar("4")).grid(row=3, column=0, padx=2, pady=2)
-
+#linha 10
 tk.Button(janela, text="5", width=6, command=lambda: digitar("5")).grid(row=3, column=1, padx=2, pady=2)
-
+#linha 11
 tk.Button(janela, text="6", width=6, command=lambda: digitar("6")).grid(row=3, column=2, padx=2, pady=2)
-
+#linha 12
 tk.Button(janela, text="+", width=6, command=lambda: escolher_operacao("+")).grid(row=3, column=3, padx=2, pady=2)
-
-# Quarta linha
+#linha 13
 tk.Button(janela, text="1", width=6, command=lambda: digitar("1")).grid(row=4, column=0, padx=2, pady=2)
-
+#linha 14
 tk.Button(janela, text="2", width=6, command=lambda: digitar("2")).grid(row=4, column=1, padx=2, pady=2)
-
+#linha 15
 tk.Button(janela, text="3", width=6, command=lambda: digitar("3")).grid(row=4, column=2, padx=2, pady=2)
-
+#linha 16
 tk.Button(janela, text="=", width=6, command=calcular).grid(row=4, column=3, rowspan=2, padx=2, pady=2)
-
-# Quinta linha
+#linha 17
 tk.Button(janela, text="0", width=15, command=lambda: digitar("0")).grid(row=5, column=0, columnspan=2, padx=2, pady=2)
-
+#linha 18
 tk.Button(janela, text=".", width=6, command=decimal).grid(row=5, column=2, padx=2, pady=2)
 
-# Mantém a janela aberta
+#loop da janela
 janela.mainloop()
